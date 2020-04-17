@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet"> 
+    <title> Fonts </title>
+</head>
+
+<body>
+
+
+
+<div class="header-css"> CSS Info </div>
+
+<div class="navbar-css">
+    <a href="index.html"> Home </a>
+    <a href="htmlData/index.html"> HTML </a>
+    <a href="cssData/index.html"> CSS </a>
+    
+    <div class="dropdown-css">
+        <button class="dropbtn-css">More 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="tools/index.html">Useful Tools</a>
+            <a href="resources/index.html">Resources</a>
+            <a href="https://github.com/RomanBlahuta/HTML_CSS">Source Code</a>
+        </div>
+    </div> 
+</div>
+
+
+<div class="content">
+
+<h1>CSS</h1>
+<div class="navbar-css">
+    <a href="cssData/index.html"> Intro </a>
+    <a href="selectors/index.html"> Selectors </a>
+    <a href="fonts/index.html"> Fonts </a>
+    <a href="mgpd/index.html"> Margins and Padding </a>
+</div>
+
+<h2>CSS Font Families</h2>
+<p>
+    In CSS, there are two types of font family names:<br /><br />
+    ✸ <strong>generic family</strong> - a group of font families with a similar look (like "Serif" or "Monospace")<br />
+    ✸ <strong>font family</strong> - a specific font family (like "Times New Roman" or "Arial")<br /><br />
+
+    ✸ <strong>Example</strong>:<br />
+    <p class="code">
+    <br />.serif {<br />
+    &ensp;font-family: "Times New Roman", Times, serif;<br />
+    }<br /><br />
+
+    .sansserif {<br />
+    &ensp;font-family: Arial, Helvetica, sans-serif;<br />
+    }<br /><br />
+
+    .monospace {<br />
+    &ensp;font-family: "Lucida Console", Courier, monospace;<br />
+    }<br /><br />
+    </p>
+</p>
+
+<h2>CSS Font Style</h2>
+<p>
+    The <strong>font-style</strong> property is mostly used to specify italic text.<br />
+    The <strong>font-weight</strong> property specifies the weight of a font.<br />
+    The <strong>font-variant</strong> property specifies whether or not a text should be displayed in a small-caps font.<br />
+    ✸ <strong>Example</strong>:<br />
+    <p class="code">
+    <br />p.normal {<br />
+    &ensp;font-style: normal;<br />
+    }<br /><br />
+
+    p.italic {<br />
+    &ensp;font-style: italic;<br />
+    }<br /><br />
+
+    p.oblique {<br />
+    &ensp;font-style: oblique;<br />
+    }<br /><br /><br />
+
+    p.normal {<br />
+    &ensp;font-weight: normal;<br />
+    }<br /><br />
+
+    p.thick {<br />
+    &ensp;font-weight: bold;
+    }<br /><br /><br />
+
+    p.normal {<br />
+    &ensp;font-variant: normal;<br />
+    }<br /><br />
+
+    p.small {<br />
+    &ensp;font-variant: small-caps;<br />
+    }<br /><br />
+    </p>
+</p>
+
+<h2>CSS Font Size</h2>
+<p>
+The <strong>font-size</strong> property sets the size of the text.<br /><br />
+
+Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.<br /><br />
+
+The font-size value can be an absolute, or relative size.<br /><br />
+
+<strong>Absolute size:</strong><br /><br />
+
+    ✸  Sets the text to a specified size<br />
+    ✸  Does not allow a user to change the text size in all browsers (bad for accessibility reasons)<br />
+    ✸  Absolute size is useful when the physical size of the output is known<br /><br />
+
+<strong>Relative size:</strong><br /><br />
+
+    ✸  Sets the size relative to surrounding elements<br />
+    ✸  Allows a user to change the text size in browsers<br /><br />
+
+The text size can be set with a <strong>vw</strong> unit, which means the "viewport width".<br /><br />
+
+That way the text size will follow the size of the browser window.<br /><br />
+</p>
+
+<h2>Font Shorthand</h2>
+<p>
+To shorten the code, it is also possible to specify all the individual font properties in one property.<br /><br />
+
+The <strong>font</strong> property is a shorthand property for:<br /><br />
+
+    ✸ <strong>font-style</strong><br />
+    ✸ <strong>font-variant</strong><br />
+    ✸ <strong>font-weight</strong><br />
+    ✸ <strong>font-size/line-height</strong><br />
+    ✸ <strong>font-family</strong><br /><br />
+
+    <p class="code">
+    <br />p.a {<br />
+    &ensp;font: 20px Arial, sans-serif;<br />
+    }<br /><br />
+
+    p.b {<br />
+    &ensp;font: italic small-caps bold 12px/30px Georgia, serif;<br />
+    }<br /><br />
+    </p>
+
+</p>
+
+</div>
+
+
+<img class="logo" src="/img/logos.png" width=126 height=75>
+
+<div class="footer">
+<ul class="links">
+    <li><img class="footer-logos" src="/img/wiki.png" /><a href="https://en.wikipedia.org/wiki/HTML">HTML on Wikipedia</a></li>
+    <li><img class="footer-logos" src="/img/wiki.png" /><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS on Wikipedia</a></li>
+    <li><img class="footer-logos" src="/img/w3.png" /><a href="https://www.w3schools.com/html/">HTML on W3Schools</a></li>
+    <li><img class="footer-logos" src="/img/w3.png" /><a href="https://www.w3schools.com/css/">CSS on W3Schools</a></li>
+</ul>
+<div>
+
+
+
+
+</body>
+
+</html>

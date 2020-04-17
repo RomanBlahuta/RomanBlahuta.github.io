@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet"> 
+    <title> Selectors </title>
+</head>
+
+<body>
+
+
+
+<div class="header-css"> CSS Info </div>
+
+<div class="navbar-css">
+    <a href="index.html"> Home </a>
+    <a href="htmlData/index.html"> HTML </a>
+    <a href="cssData/index.html"> CSS </a>
+    
+    <div class="dropdown-css">
+        <button class="dropbtn-css">More 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="tools/index.html">Useful Tools</a>
+            <a href="resources/index.html">Resources</a>
+            <a href="https://github.com/RomanBlahuta/HTML_CSS">Source Code</a>
+        </div>
+    </div> 
+</div>
+
+
+<div class="content">
+
+<h1>CSS</h1>
+<div class="navbar-css">
+    <a href="cssData/index.html"> Intro </a>
+    <a href="selectors/index.html"> Selectors </a>
+    <a href="fonts/index.html"> Fonts </a>
+    <a href="mgpd/index.html"> Margins and Padding </a>
+</div>
+
+<h2>CSS Selectors</h2>
+
+<p>
+    CSS selectors are used to "find" (or select) the HTML elements you want to style.<br /><br />
+    We can divide CSS selectors into five categories:<br /><br />
+    ✸ <a href="#simple">Simple selectors</a> (select elements based on name, id, class)<br />
+    ✸ <a href="#combinator">Combinator selectors</a> (select elements based on a specific relationship between them)<br />
+    ✸ <a href="#pseudo-cl">Pseudo-class selectors</a> (select elements based on a certain state)<br />
+    ✸ <a href="#pseudo-el">Pseudo-elements selectors</a> (select and style a part of an element)<br />
+    ✸ <a href="#attr">Attribute selectors</a> (select elements based on an attribute or attribute value)<br /><br />
+</p>
+
+<h2 id="simple">Simple selectors</h2>
+
+<p>
+    ✸ <strong>The CSS element Selector</strong> — selects HTML elements based on the element name.<br />
+    <p class="code">
+    <br />p {<br />
+    &ensp;text-align: center;<br />
+    &ensp;color: red;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>The CSS id Selector</strong> — uses the id attribute of an HTML element to select a specific element.<br />
+    <p class="code">
+    <br />#idname {
+    &ensp;text-align: center;<br />
+    &ensp;color: red;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>The CSS class Selector</strong> — selects HTML elements with a specific class attribute.<br />
+    <p class="code">
+    <br />.classname {<br />
+    &ensp;text-align: center;<br />
+    &ensp;color: red;<br />
+    }<br /><br /><br />
+
+    div.classname {<br />
+    &ensp;text-align: center;<br />
+    &ensp;color: red;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>The CSS Universal Selector  (*)</strong>  selects all HTML elements on the page.<br />
+    <p class="code">
+    <br />* {<br />
+    &ensp;text-align: center;<br />
+    &ensp;color: blue;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>The CSS Grouping Selector</strong> — selects all the HTML elements with the same style definitions.<br /><br />
+    <p class="code">
+    <br />h1, h2, p {<br />
+    &ensp;text-align: center;<br />
+    &ensp;color: red;<br />
+    }<br /><br />
+    </p>
+</p>
+
+<h2 id="combinator">Combinator selectors</h2>
+
+<p>
+    ✸ <strong>Descendant Selector</strong> — matches all elements that are descendants of a specified element.<br />
+    <p class="code">
+    <br />div p {<br />
+    &ensp;background-color: yellow;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>Child Selector</strong> — selects all elements that are the children of a specified element.<br />
+    <p class="code">
+    <br />div > p {<br />
+    &ensp;background-color: yellow;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>Adjacent Sibling Selector</strong> — selects all elements that are the adjacent siblings of a specified element. Sibling elements must have the same parent element, and "adjacent" means "immediately following".<br />
+    <p class="code">
+    <br />div + p {<br />
+    &ensp;background-color: yellow;<br />
+    }<br /><br />
+    </p>
+    ✸ <strong>General Sibling Selector</strong> — selects all elements that are siblings of a specified element.<br />
+    <p class="code">
+    <br />div ~ p {<br />
+    &ensp;background-color: yellow;<br />
+    }<br /><br />
+    </p>
+</p>
+
+<h2 id="pseudo-cl">Pseudo-class selectors</h2>
+
+<p>
+    <strong>What are Pseudo-classes?</strong><br />
+    A pseudo-class is used to define a special state of an element.<br />
+    For example, it can be used to:<br /><br />
+    ✸ Style an element when a user mouses over it<br />
+    ✸ Style visited and unvisited links differently<br />
+    ✸ Style an element when it gets focus<br /><br />
+
+    ✸ <strong>Example</strong>:<br />
+    <p class="code">
+    <br />/* unvisited link */<br />
+    a:link {<br />
+    &ensp;color: #FF0000;<br />
+    }<br /><br />
+
+    /* visited link */<br />
+    a:visited {<br />
+    &ensp;color: #00FF00;<br />
+    }<br /><br />
+
+    /* mouse over link */<br />
+    a:hover {<br />
+    &ensp;color: #FF00FF;<br />
+    }<br /><br />
+
+    /* selected link */<br />
+    a:active {<br />
+    &ensp;color: #0000FF;<br />
+    }<br /><br />
+    </p>
+
+    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Full list of pseudo-classes</a>
+</p>
+
+<h2 id="pseudo-el">Pseudo-elements selectors</h2>
+
+<p>
+    <strong>What are Pseudo-elements?</strong><br />
+    A CSS pseudo-element is used to style specified parts of an element.<br />
+    For example, it can be used to:<br /><br />
+    ✸ Style the first letter, or line, of an element<br />
+    ✸ Insert content before, or after, the content of an element <br /><br />
+
+    ✸ <strong>Example</strong>:<br />
+    <p class="code">
+    <br />p::first-letter {<br />
+    &ensp;color: #ff0000;<br />
+    &ensp;font-size: xx-large;<br />
+    }<br /><br />
+
+    p::first-line {<br />
+    &ensp;color: #0000ff;<br />
+    &ensp;font-variant: small-caps;<br />
+    }<br /><br />
+    </p>
+
+    <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Full list of pseudo-elements</a>
+</p>
+
+<h2 id="attr">Attribute selectors</h2>
+
+<p>
+    It is possible to style HTML elements that have specific attributes or attribute values.<br /><br />
+    ✸ <strong>Example</strong>:<br />
+    <p class="code">
+    <br />[class^="top"] {<br />
+    &ensp;background: yellow;<br />
+    }<br /><br />
+
+    input[type="text"] {<br />
+    &ensp;width: 150px;<br />
+    &ensp;display: block;<br />
+    &ensp;margin-bottom: 10px;<br />
+    &ensp;background-color: yellow;<br />
+    }<br /><br />
+
+    input[type="button"] {<br />
+    &ensp;width: 120px;<br />
+    &ensp;margin-left: 35px;<br />
+    &ensp;display: block;<br />
+    }<br /><br />
+    </p>
+
+    <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">More on attribute selectors</a>
+</p>
+
+</div>
+
+
+<img class="logo" src="/img/logos.png" width=126 height=75>
+
+<div class="footer">
+<ul class="links">
+    <li><img class="footer-logos" src="/img/wiki.png" /><a href="https://en.wikipedia.org/wiki/HTML">HTML on Wikipedia</a></li>
+    <li><img class="footer-logos" src="/img/wiki.png" /><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS on Wikipedia</a></li>
+    <li><img class="footer-logos" src="/img/w3.png" /><a href="https://www.w3schools.com/html/">HTML on W3Schools</a></li>
+    <li><img class="footer-logos" src="/img/w3.png" /><a href="https://www.w3schools.com/css/">CSS on W3Schools</a></li>
+</ul>
+<div>
+
+
+
+</body>
+
+</html>
